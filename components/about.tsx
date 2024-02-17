@@ -17,33 +17,26 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
+<SectionHeading>About Me</SectionHeading>
+<p className="mb-3">
+  After <span className="font-medium">15 years of experience in logistics</span>, I decided to pivot towards 
+  <span className="font-medium">web development</span>, an area I've recently become certified in. This transition was driven by 
+  my proactive approach, leveraging my transferable skills and a strong desire for innovation. 
+  <span className="italic">What excites me about programming</span> is the opportunity to solve complex problems and 
+  create impactful solutions. I <span className="underline">love</span> the challenge and satisfaction that come from 
+  cracking a tough coding problem. My main technical skills include 
+  <span className="font-medium">HTML, CSS, JavaScript, React, Express, Node.js, Git/Github, Leaflet, Swift, and SwiftUI</span>. 
+  I'm constantly seeking to expand my knowledge and apply it to real-world projects. I am actively looking for a 
+  <span className="font-medium">new role</span> where I can contribute and grow as a web developer.
+</p>
 
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
-      </p>
+<p>
+  <span className="italic">Outside of coding</span>, I'm passionate about <span className="font-medium">diving, astronomy, and photography</span>. 
+  I also dedicate time to <span className="font-medium">coaching Taekwondo</span>, reflecting my commitment to teaching and 
+  community involvement. I enjoy <span className="font-medium">exploring new areas</span> and am always curious to learn more 
+  about <span className="font-medium">technology and science</span>. Currently, I am enhancing my skills in web development 
+  technologies and methodologies.
+</p>
     </motion.section>
   );
 }

@@ -1,10 +1,14 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaSwimmer } from "react-icons/fa"; // Added FaSwimmer for diving hobby
+import { MdOutlineSportsMartialArts } from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with actual image
+import epsilonPartnersImg from "@/public/logo-epsilon-partners.png"; // Placeholder, replace with actual image
+import taekwondoImg from "@/public/btkd.jpg"; // Placeholder, replace with actual image
+import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
+
+
 
 export const links = [
   {
@@ -35,73 +39,85 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "iOS Developer Training",
+    location: "OpenClassrooms",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Completed iOS development training with Swift and SwiftUI, mastering Xcode and data management with CoreData.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "Specific dates not provided", // Replace with actual dates if available
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Web Developer Intern",
+    location: "Epsilon Partners",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Internship focusing on front-end integration with HTML5, CSS3, JavaScript, React, and Next.js; managed databases with MongoDB.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Specific dates not provided", // Replace with actual dates if available
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Logistics Technician & Technicien Referent",
+    location: "Boehringer Ingelheim",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Managed logistics operations, specializing in goods reception, aseptic operations, sterilization, and continuous improvement.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "08/2016 - Present", // Adjust based on your tenure
+  },
+  {
+    title: "Taekwondo Trainer",
+    location: "Bron",
+    description:
+      "Management of athletes, organization of events and competitions, and development of training programs.",
+    icon: React.createElement(MdOutlineSportsMartialArts), // Assuming FaBelt as a placeholder; consider using a more appropriate icon if available
+    date: "Since September 2013",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    title: "iOS App Development",
+    description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
+    tags: ["Swift", "SwiftUI", "Xcode", "CoreData"],
+    imageUrl: openClassroomsImg,
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    title: "Web Development Internship",
+    description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
+    imageUrl: epsilonPartnersImg,
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    title: "Taekwondo Coaching",
+    description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
+    tags: ["Website Management", "Community Engagement"],
+    imageUrl: taekwondoImg,
+  },
+  {
+    title: "DataFight",
+    description: "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better.",
+    tags: ["Next.js", "MongoDB", "Express"],
+    imageUrl: taekwondoDataImg, // Placeholder, replace with actual image path
   },
 ] as const;
+
 
 export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
-  "TypeScript",
   "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "Node.js",
+  "Git/Github",
+  "Leaflet",
+  "Swift",
+  "SwiftUI",
+  // Assuming MongoDB is a skill given your internship; adjust as needed
+  "MongoDB",
+  // Additional skills from hobbies or interests
+  "Taekwondo",
+  "Diving", // Represented as an interest; adjust if you have relevant technical skills here
+  "Astronomy",
+  "Photography",
+  
+  // Soft skills, not typically listed here but consider incorporating elsewhere
 ] as const;
