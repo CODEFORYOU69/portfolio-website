@@ -11,6 +11,5 @@ html.dark {
 }
 
 .borderBlack {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
+  @apply border border-black/10;
 }

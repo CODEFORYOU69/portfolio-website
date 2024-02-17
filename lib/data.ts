@@ -4,9 +4,12 @@ import { FaReact } from "react-icons/fa";
 import { MdOutlineSportsMartialArts } from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
 import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with actual image
-import epsilonPartnersImg from "@/public/logo-epsilon-partners.png"; // Placeholder, replace with actual image
+import epsilonPartnersImg from "@/public/epsilon.png"; // Placeholder, replace with actual image
 import taekwondoImg from "@/public/btkd.jpg"; // Placeholder, replace with actual image
 import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
+import { FcMultipleDevices } from "react-icons/fc";
+import { IoIosAppstore } from "react-icons/io";
+
 
 
 
@@ -43,7 +46,7 @@ export const experiencesData = [
     location: "OpenClassrooms",
     description:
       "Completed iOS development training with Swift and SwiftUI, mastering Xcode and data management with CoreData.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(IoIosAppstore),
     date: "since sept 2023", // Replace with actual dates if available
   },
   {
@@ -51,7 +54,7 @@ export const experiencesData = [
     location: "Epsilon Partners",
     description:
       "Internship focusing on front-end integration with HTML5, CSS3, JavaScript, React, and Next.js; managed databases with MongoDB.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FcMultipleDevices),
     date: "02/2023 - 06/2023 ", // Replace with actual dates if available
   },
   {
@@ -74,29 +77,30 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "iOS App Development",
-    description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
-    tags: ["Swift", "SwiftUI", "Xcode", "CoreData"],
-    imageUrl: openClassroomsImg,
-  },
-  {
-    title: "Web Development Internship",
-    description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
-    imageUrl: epsilonPartnersImg,
-  },
-  {
-    title: "Taekwondo Coaching",
-    description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
-    tags: ["Website Management", "Community Engagement"],
-    imageUrl: taekwondoImg,
-  },
-  {
     title: "DataFight",
     description: "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better.",
     tags: ["Next.js", "MongoDB", "Express"],
     imageUrl: taekwondoDataImg, // Placeholder, replace with actual image path
   },
+  {
+    title: "Instagrid",
+    description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
+    tags: ["Swift", "SwiftUI", "Xcode"],
+    imageUrl: openClassroomsImg,
+  },
+  {
+    title: "Epsilon partners site",
+    description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
+    imageUrl: epsilonPartnersImg,
+  },
+  {
+    title: "Bron Tkd website",
+    description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
+    tags: ["Website Management", "Community Engagement"],
+    imageUrl: taekwondoImg,
+  },
+  
 ] as const;
 
 
