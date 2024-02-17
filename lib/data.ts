@@ -1,14 +1,14 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa"; 
+
 import { MdOutlineSportsMartialArts } from "react-icons/md";
-import { LuGraduationCap } from "react-icons/lu";
 import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with actual image
 import epsilonPartnersImg from "@/public/epsilon.png"; // Placeholder, replace with actual image
 import taekwondoImg from "@/public/btkd.jpg"; // Placeholder, replace with actual image
 import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
 import { FcMultipleDevices } from "react-icons/fc";
 import { IoIosAppstore } from "react-icons/io";
+import { GrUserWorker } from "react-icons/gr";
+
 
 
 
@@ -62,7 +62,7 @@ export const experiencesData = [
     location: "Boehringer Ingelheim",
     description:
       "Managed logistics operations, specializing in goods reception, aseptic operations, sterilization, and continuous improvement.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(GrUserWorker),
     date: "08/2016 - Present", // Adjust based on your tenure
   },
   {
