@@ -3,7 +3,7 @@ import React from "react";
 import { MdOutlineSportsMartialArts } from "react-icons/md";
 import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with actual image
 import epsilonPartnersImg from "@/public/epsilon.png"; // Placeholder, replace with actual image
-import taekwondoImg from "@/public/btkd.jpg"; // Placeholder, replace with actual image
+import taekwondoImg from "@/public/btkd.png"; // Placeholder, replace with actual image
 import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
 import { FcMultipleDevices } from "react-icons/fc";
 import { IoIosAppstore } from "react-icons/io";
