@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaSwimmer } from "react-icons/fa"; // Added FaSwimmer for diving hobby
+import { FaReact } from "react-icons/fa"; 
 import { MdOutlineSportsMartialArts } from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
 import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with actual image
@@ -44,7 +44,7 @@ export const experiencesData = [
     description:
       "Completed iOS development training with Swift and SwiftUI, mastering Xcode and data management with CoreData.",
     icon: React.createElement(LuGraduationCap),
-    date: "Specific dates not provided", // Replace with actual dates if available
+    date: "since sept 2023", // Replace with actual dates if available
   },
   {
     title: "Web Developer Intern",
@@ -52,7 +52,7 @@ export const experiencesData = [
     description:
       "Internship focusing on front-end integration with HTML5, CSS3, JavaScript, React, and Next.js; managed databases with MongoDB.",
     icon: React.createElement(CgWorkAlt),
-    date: "Specific dates not provided", // Replace with actual dates if available
+    date: "02/2023 - 06/2023 ", // Replace with actual dates if available
   },
   {
     title: "Logistics Technician & Technicien Referent",
