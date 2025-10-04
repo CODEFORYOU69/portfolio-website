@@ -5,9 +5,30 @@ import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with ac
 import epsilonPartnersImg from "@/public/epsilon.png"; // Placeholder, replace with actual image
 import taekwondoImg from "@/public/btkd.png"; // Placeholder, replace with actual image
 import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
+import pahnImg from "@/public/pahntkd.png";
+import andcoImg from "@/public/andco.png";
 import { FcMultipleDevices } from "react-icons/fc";
 import { IoIosAppstore } from "react-icons/io";
 import { GrUserWorker } from "react-icons/gr";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiPrisma,
+  SiDocker,
+  SiGit,
+  SiSwift,
+  SiTailwindcss,
+  SiFramer
+} from "react-icons/si";
+import { MdSecurity } from "react-icons/md";
 
 
 
@@ -100,28 +121,39 @@ export const projectsData = [
     tags: ["Website Management", "Community Engagement"],
     imageUrl: taekwondoImg,
   },
-  
+  {
+    title: "PAHN TKD Champ",
+    description: "Talent detection and development platform for French Taekwondo Federation. Features athlete evaluation, performance tracking, and talent management for preparing future champions.",
+    tags: ["Next.js", "TypeScript", "Talent Detection", "FFTDA"],
+    imageUrl: pahnImg,
+  },
+  {
+    title: "AndCo",
+    description: "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools.",
+    tags: ["Next.js", "React", "MongoDB", "SaaS"],
+    imageUrl: andcoImg,
+  },
+
 ] as const;
 
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Express",
-  "Node.js",
-  "Git/Github",
-  "Leaflet",
-  "Swift",
-  "SwiftUI",
-  // Assuming MongoDB is a skill given your internship; adjust as needed
-  "MongoDB",
-  // Additional skills from hobbies or interests
-  "Taekwondo",
-  "Diving", // Represented as an interest; adjust if you have relevant technical skills here
-  "Astronomy",
-  "Photography",
-  
-  // Soft skills, not typically listed here but consider incorporating elsewhere
-] as const;
+  { name: "HTML", icon: React.createElement(SiHtml5) },
+  { name: "CSS", icon: React.createElement(SiCss3) },
+  { name: "JavaScript", icon: React.createElement(SiJavascript) },
+  { name: "TypeScript", icon: React.createElement(SiTypescript) },
+  { name: "React", icon: React.createElement(SiReact) },
+  { name: "Next.js", icon: React.createElement(SiNextdotjs) },
+  { name: "Node.js", icon: React.createElement(SiNodedotjs) },
+  { name: "Express", icon: React.createElement(SiExpress) },
+  { name: "MongoDB", icon: React.createElement(SiMongodb) },
+  { name: "PostgreSQL", icon: React.createElement(SiPostgresql) },
+  { name: "Prisma", icon: React.createElement(SiPrisma) },
+  { name: "Docker", icon: React.createElement(SiDocker) },
+  { name: "Git", icon: React.createElement(SiGit) },
+  { name: "Swift", icon: React.createElement(SiSwift) },
+  { name: "SwiftUI", icon: React.createElement(SiSwift) },
+  { name: "Better Auth", icon: React.createElement(MdSecurity) },
+  { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss) },
+  { name: "Framer Motion", icon: React.createElement(SiFramer) },
+];
