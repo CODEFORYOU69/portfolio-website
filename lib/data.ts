@@ -7,6 +7,7 @@ import taekwondoImg from "@/public/btkd.png"; // Placeholder, replace with actua
 import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
 import pahnImg from "@/public/pahntkd.png";
 import andcoImg from "@/public/andco.png";
+import kechwafflesImg from "@/public/kechwaffles.jpg";
 import { FcMultipleDevices } from "react-icons/fc";
 import { IoIosAppstore } from "react-icons/io";
 import { GrUserWorker } from "react-icons/gr";
@@ -98,28 +99,16 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "DataFight",
-    description: "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better.",
-    tags: ["Next.js", "MongoDB", "Express"],
-    imageUrl: taekwondoDataImg, // Placeholder, replace with actual image path
+    title: "Kechwaffles",
+    description: "E-commerce website for authentic Belgian waffles. Features online ordering, product showcase, and streamlined checkout experience.",
+    tags: ["Next.js", "React", "E-commerce"],
+    imageUrl: kechwafflesImg,
   },
   {
-    title: "Instagrid",
-    description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
-    tags: ["Swift", "SwiftUI", "Xcode"],
-    imageUrl: openClassroomsImg,
-  },
-  {
-    title: "Epsilon partners site",
-    description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
-    imageUrl: epsilonPartnersImg,
-  },
-  {
-    title: "Bron Tkd website",
-    description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
-    tags: ["Website Management", "Community Engagement"],
-    imageUrl: taekwondoImg,
+    title: "AndCo",
+    description: "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools.",
+    tags: ["Next.js", "React", "MongoDB", "SaaS"],
+    imageUrl: andcoImg,
   },
   {
     title: "PAHN TKD Champ",
@@ -128,32 +117,50 @@ export const projectsData = [
     imageUrl: pahnImg,
   },
   {
-    title: "AndCo",
-    description: "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools.",
-    tags: ["Next.js", "React", "MongoDB", "SaaS"],
-    imageUrl: andcoImg,
+    title: "Bron Tkd website",
+    description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
+    tags: ["Website Management", "Community Engagement"],
+    imageUrl: taekwondoImg,
+  },
+  {
+    title: "Epsilon partners site",
+    description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
+    imageUrl: epsilonPartnersImg,
+  },
+  {
+    title: "Instagrid",
+    description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
+    tags: ["Swift", "SwiftUI", "Xcode"],
+    imageUrl: openClassroomsImg,
+  },
+  {
+    title: "DataFight",
+    description: "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better.",
+    tags: ["Next.js", "MongoDB", "Express"],
+    imageUrl: taekwondoDataImg, // Placeholder, replace with actual image path
   },
 
 ] as const;
 
 
 export const skillsData = [
-  { name: "HTML", icon: React.createElement(SiHtml5) },
-  { name: "CSS", icon: React.createElement(SiCss3) },
-  { name: "JavaScript", icon: React.createElement(SiJavascript) },
-  { name: "TypeScript", icon: React.createElement(SiTypescript) },
-  { name: "React", icon: React.createElement(SiReact) },
-  { name: "Next.js", icon: React.createElement(SiNextdotjs) },
-  { name: "Node.js", icon: React.createElement(SiNodedotjs) },
-  { name: "Express", icon: React.createElement(SiExpress) },
-  { name: "MongoDB", icon: React.createElement(SiMongodb) },
-  { name: "PostgreSQL", icon: React.createElement(SiPostgresql) },
-  { name: "Prisma", icon: React.createElement(SiPrisma) },
-  { name: "Docker", icon: React.createElement(SiDocker) },
-  { name: "Git", icon: React.createElement(SiGit) },
-  { name: "Swift", icon: React.createElement(SiSwift) },
-  { name: "SwiftUI", icon: React.createElement(SiSwift) },
-  { name: "Better Auth", icon: React.createElement(MdSecurity) },
-  { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss) },
-  { name: "Framer Motion", icon: React.createElement(SiFramer) },
+  { name: "HTML", icon: React.createElement(SiHtml5), color: "#E34F26" },
+  { name: "CSS", icon: React.createElement(SiCss3), color: "#1572B6" },
+  { name: "JavaScript", icon: React.createElement(SiJavascript), color: "#F7DF1E" },
+  { name: "TypeScript", icon: React.createElement(SiTypescript), color: "#3178C6" },
+  { name: "React", icon: React.createElement(SiReact), color: "#61DAFB" },
+  { name: "Next.js", icon: React.createElement(SiNextdotjs), color: "#000000" },
+  { name: "Node.js", icon: React.createElement(SiNodedotjs), color: "#339933" },
+  { name: "Express", icon: React.createElement(SiExpress), color: "#000000" },
+  { name: "MongoDB", icon: React.createElement(SiMongodb), color: "#47A248" },
+  { name: "PostgreSQL", icon: React.createElement(SiPostgresql), color: "#4169E1" },
+  { name: "Prisma", icon: React.createElement(SiPrisma), color: "#2D3748" },
+  { name: "Docker", icon: React.createElement(SiDocker), color: "#2496ED" },
+  { name: "Git", icon: React.createElement(SiGit), color: "#F05032" },
+  { name: "Swift", icon: React.createElement(SiSwift), color: "#FA7343" },
+  { name: "SwiftUI", icon: React.createElement(SiSwift), color: "#FA7343" },
+  { name: "Better Auth", icon: React.createElement(MdSecurity), color: "#10B981" },
+  { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss), color: "#06B6D4" },
+  { name: "Framer Motion", icon: React.createElement(SiFramer), color: "#FF0055" },
 ];

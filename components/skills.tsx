@@ -43,7 +43,7 @@ export default function Skills() {
             }}
             custom={index}
           >
-            <span className="text-2xl">{skill.icon}</span>
+            <span className="text-2xl" style={{ color: skill.color }}>{skill.icon}</span>
             <span>{skill.name}</span>
           </motion.li>
         ))}
