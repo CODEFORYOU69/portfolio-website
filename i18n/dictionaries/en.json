@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Hello, I'm Younes Ouasmi.",
+    "description": "After a successful <strong>15-year career in logistics</strong>, I pivoted to <strong>web development</strong>, a field I am deeply passionate about. I find joy in <em>creating and innovating on the web</em>. My recent focus has been on <u>JavaScript frameworks like React and Next.js</u>, leveraging my skills to build responsive and impactful web applications.",
+    "contactMe": "Contact me here",
+    "downloadCV": "Download CV",
+    "portraitAlt": "Younes Portrait"
+  },
+  "about": {
+    "title": "About me"
+  },
+  "projects": {
+    "title": "My projects"
+  },
+  "skills": {
+    "title": "My skills"
+  },
+  "experience": {
+    "title": "My experience"
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "Please contact me directly at",
+    "or": "or through this form.",
+    "email": "Your email",
+    "message": "Your message",
+    "submit": "Submit",
+    "sending": "Sending..."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "about": "About this website:",
+    "tech": "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
+  }
+}

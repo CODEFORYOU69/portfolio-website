@@ -9,12 +9,14 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import portraitImg from "@/public/portrait.jpg"; // Placeholder, replace with actual image
-
+import portraitImg from "@/public/portrait.jpg";
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const t = useTranslations('intro');
+  const locale = useLocale();
 
   return (
     <section
@@ -33,8 +35,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src= {portraitImg} 
-              alt="Younes Portrait"
+              src= {portraitImg}
+              alt={t('portraitAlt')}
               width="192"
               height="192"
               quality="95"
@@ -64,8 +66,17 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-       <span className="font-bold">Hello, I'm Younes Ouasmi.</span> After a successful <span className="font-bold">15-year career in logistics</span>, I pivoted to <span className="font-bold">web development</span>, a field I am deeply passionate about. I find joy in <span className="italic">creating and innovating on the web</span>. My recent focus has been on <span className="underline">JavaScript frameworks like React and Next.js</span>, leveraging my skills to build responsive and impactful web applications.
-
+        {locale === 'fr' ? (
+          <>
+            <span className="font-bold">Bonjour, je suis Younes Ouasmi.</span>{" "}
+            <span className="font-bold">Développeur web full-stack</span> passionné par la création d'applications web modernes et performantes. Je vous invite à <span className="italic">explorer mon portfolio</span> pour découvrir mes projets et compétences. N'hésitez pas à <span className="underline">me contacter pour vos projets</span>, je suis à l'écoute et disponible pour collaborer sur de nouvelles opportunités.
+          </>
+        ) : (
+          <>
+            <span className="font-bold">Hello, I'm Younes Ouasmi.</span>{" "}
+            <span className="font-bold">Full-stack web developer</span> passionate about creating modern and performant web applications. I invite you to <span className="italic">explore my portfolio</span> to discover my projects and skills. Feel free to <span className="underline">contact me for your projects</span>, I am available and ready to collaborate on new opportunities.
+          </>
+        )}
       </motion.h1>
 
       <motion.div
@@ -77,14 +88,14 @@ export default function Intro() {
         }}
       >
         <Link
-          href="#contact"
+          href={`/${locale}#contact`}
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          {t('contactMe')}{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -93,22 +104,26 @@ export default function Intro() {
           href="/younesouasmicv.pdf"
           download
         >
-          Download CV{" "}
+          {t('downloadCV')}{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/younes-ouasmi-468926142/"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
         >
           <BsLinkedin />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/CODEFORYOU69"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Profile"
         >
           <FaGithubSquare />
         </a>

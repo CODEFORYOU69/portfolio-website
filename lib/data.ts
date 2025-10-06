@@ -7,7 +7,7 @@ import taekwondoImg from "@/public/btkd.png"; // Placeholder, replace with actua
 import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
 import pahnImg from "@/public/pahntkd.png";
 import andcoImg from "@/public/andco.png";
-import kechwafflesImg from "@/public/kechwaffles.jpg";
+import kechwafflesImg from "@/public/kechwaffles.png";
 import { FcMultipleDevices } from "react-icons/fc";
 import { IoIosAppstore } from "react-icons/io";
 import { GrUserWorker } from "react-icons/gr";
@@ -64,6 +64,7 @@ export const links = [
 
 export const experiencesData = [
   {
+    slug: "ios",
     title: "iOS Developer Training",
     location: "OpenClassrooms",
     description:
@@ -72,6 +73,7 @@ export const experiencesData = [
     date: "since sept 2023", // Replace with actual dates if available
   },
   {
+    slug: "intern",
     title: "Web Developer Intern",
     location: "Epsilon Partners",
     description:
@@ -80,6 +82,7 @@ export const experiencesData = [
     date: "02/2023 - 06/2023 ", // Replace with actual dates if available
   },
   {
+    slug: "logistics",
     title: "Logistics Technician & Technicien Referent",
     location: "Boehringer Ingelheim",
     description:
@@ -88,6 +91,7 @@ export const experiencesData = [
     date: "08/2016 - Present", // Adjust based on your tenure
   },
   {
+    slug: "trainer",
     title: "Taekwondo Trainer",
     location: "Bron",
     description:
@@ -100,42 +104,49 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "Kechwaffles",
+    slug: "kechwaffles",
     description: "E-commerce website for authentic Belgian waffles. Features online ordering, product showcase, and streamlined checkout experience.",
     tags: ["Next.js", "React", "E-commerce"],
     imageUrl: kechwafflesImg,
   },
   {
     title: "AndCo",
+    slug: "andco",
     description: "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools.",
     tags: ["Next.js", "React", "MongoDB", "SaaS"],
     imageUrl: andcoImg,
   },
   {
     title: "PAHN TKD Champ",
+    slug: "pahn",
     description: "Talent detection and development platform for French Taekwondo Federation. Features athlete evaluation, performance tracking, and talent management for preparing future champions.",
     tags: ["Next.js", "TypeScript", "Talent Detection", "FFTDA"],
     imageUrl: pahnImg,
   },
   {
     title: "Bron Tkd website",
+    slug: "bron",
     description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
     tags: ["Website Management", "Community Engagement"],
     imageUrl: taekwondoImg,
   },
   {
     title: "Epsilon partners site",
+    slug: "epsilon",
     description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
     tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
     imageUrl: epsilonPartnersImg,
   },
   {
     title: "Instagrid",
+    slug: "instagrid",
     description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
     tags: ["Swift", "SwiftUI", "Xcode"],
     imageUrl: openClassroomsImg,
   },
   {
     title: "DataFight",
+    slug: "datafight",
     description: "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better.",
     tags: ["Next.js", "MongoDB", "Express"],
     imageUrl: taekwondoDataImg, // Placeholder, replace with actual image path

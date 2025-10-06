@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Bonjour, je suis Younes Ouasmi.",
+    "description": "Après une {strong}carrière réussie de 15 ans dans la logistique{/strong}, je me suis reconverti dans le {strong}développement web{/strong}, un domaine qui me passionne profondément. Je trouve ma joie dans la {em}création et l'innovation sur le web{/em}. Je me concentre récemment sur les {u}frameworks JavaScript comme React et Next.js{/u}, en utilisant mes compétences pour créer des applications web réactives et percutantes.",
+    "contactMe": "Contactez-moi",
+    "downloadCV": "Télécharger CV",
+    "portraitAlt": "Portrait de Younes"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "paragraph1": "Après {bold}15 ans d'expérience en logistique{/bold}, j'ai décidé de me reconvertir dans le {bold}développement web{/bold}, un domaine dans lequel je me suis récemment certifié. Cette transition a été motivée par mon approche proactive, en tirant parti de mes compétences transférables et d'un fort désir d'innovation. {italic}Ce qui m'enthousiasme dans la programmation{/italic}, c'est l'opportunité de résoudre des problèmes complexes et de créer des solutions impactantes. J'{underline}adore{/underline} le défi et la satisfaction qui viennent de la résolution d'un problème de code difficile. Mes principales compétences techniques incluent {bold}HTML, CSS, JavaScript, React, Express, Node.js, Git/Github, Leaflet, Swift et SwiftUI{/bold}. Je cherche constamment à élargir mes connaissances et à les appliquer à des projets concrets. Je recherche activement un {bold}nouveau poste{/bold} où je peux contribuer et grandir en tant que développeur web.",
+    "paragraph2": "{italic}En dehors du code{/italic}, je suis passionné par {bold}la plongée, l'astronomie et la photographie{/bold}. Je consacre également du temps à {bold}l'entraînement de Taekwondo{/bold}, reflétant mon engagement envers l'enseignement et l'implication communautaire. J'aime {bold}explorer de nouveaux domaines{/bold} et suis toujours curieux d'en apprendre davantage sur {bold}la technologie et la science{/bold}. Actuellement, je perfectionne mes compétences en technologies et méthodologies de développement web."
+  },
+  "projects": {
+    "title": "Mes projets",
+    "kechwaffles": {
+      "description": "Site e-commerce pour gaufres belges authentiques. Commande en ligne, présentation des produits et processus de paiement simplifié."
+    },
+    "andco": {
+      "description": "Plateforme SaaS complète pour la gestion de clubs d'arts martiaux. Inscription en ligne aux événements, création automatique de tableaux de tournois, gestion des membres et outils de communication automatisés."
+    },
+    "pahn": {
+      "description": "Plateforme de détection et développement de talents pour la Fédération Française de Taekwondo. Évaluation des athlètes, suivi des performances et gestion des talents pour préparer les futurs champions."
+    },
+    "bron": {
+      "description": "Gestion du site web et de la présence digitale pour l'association de Taekwondo, renforçant l'engagement communautaire."
+    },
+    "epsilon": {
+      "description": "Contribution à des projets web, focus sur les technologies front-end et MongoDB pour la gestion de bases de données."
+    },
+    "instagrid": {
+      "description": "Développement d'applications iOS utilisant Swift et SwiftUI durant ma formation à OpenClassrooms."
+    },
+    "datafight": {
+      "description": "Application web conçue pour analyser les combats de Taekwondo et améliorer les méthodologies d'entraînement. Responsive et conviviale, elle aide les entraîneurs et athlètes à suivre les performances et élaborer de meilleures stratégies."
+    }
+  },
+  "skills": {
+    "title": "Mes compétences"
+  },
+  "experience": {
+    "title": "Mon expérience",
+    "ios": {
+      "title": "Formation Développeur iOS",
+      "location": "OpenClassrooms",
+      "description": "Formation au développement iOS avec Swift et SwiftUI, maîtrise de Xcode et gestion des données avec CoreData.",
+      "date": "depuis sept 2023"
+    },
+    "intern": {
+      "title": "Stagiaire Développeur Web",
+      "location": "Epsilon Partners",
+      "description": "Stage axé sur l'intégration front-end avec HTML5, CSS3, JavaScript, React et Next.js; gestion de bases de données avec MongoDB.",
+      "date": "02/2023 - 06/2023"
+    },
+    "logistics": {
+      "title": "Technicien Logistique & Technicien Référent",
+      "location": "Boehringer Ingelheim",
+      "description": "Gestion des opérations logistiques, spécialisé en réception de marchandises, opérations aseptiques, stérilisation et amélioration continue.",
+      "date": "08/2016 - Présent"
+    },
+    "trainer": {
+      "title": "Entraîneur de Taekwondo",
+      "location": "Bron",
+      "description": "Gestion des athlètes, organisation d'événements et compétitions, développement de programmes d'entraînement.",
+      "date": "Depuis septembre 2013"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Contactez-moi directement à",
+    "or": "ou via ce formulaire.",
+    "email": "Votre email",
+    "message": "Votre message",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours..."
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "about": "À propos de ce site :",
+    "tech": "construit avec React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, hébergement Vercel."
+  }
+}

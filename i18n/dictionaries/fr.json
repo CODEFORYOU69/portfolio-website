@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Bonjour, je suis Younes Ouasmi.",
+    "description": "Après une <strong>carrière réussie de 15 ans dans la logistique</strong>, je me suis reconverti dans le <strong>développement web</strong>, un domaine qui me passionne profondément. Je trouve ma joie dans la <em>création et l'innovation sur le web</em>. Je me concentre récemment sur les <u>frameworks JavaScript comme React et Next.js</u>, en utilisant mes compétences pour créer des applications web réactives et percutantes.",
+    "contactMe": "Contactez-moi",
+    "downloadCV": "Télécharger CV",
+    "portraitAlt": "Portrait de Younes"
+  },
+  "about": {
+    "title": "À propos de moi"
+  },
+  "projects": {
+    "title": "Mes projets"
+  },
+  "skills": {
+    "title": "Mes compétences"
+  },
+  "experience": {
+    "title": "Mon expérience"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Contactez-moi directement à",
+    "or": "ou via ce formulaire.",
+    "email": "Votre email",
+    "message": "Votre message",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours..."
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "about": "À propos de ce site :",
+    "tech": "construit avec React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, hébergement Vercel."
+  }
+}

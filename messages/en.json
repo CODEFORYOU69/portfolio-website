@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Hello, I'm Younes Ouasmi.",
+    "description": "After a successful {strong}15-year career in logistics{/strong}, I pivoted to {strong}web development{/strong}, a field I am deeply passionate about. I find joy in {em}creating and innovating on the web{/em}. My recent focus has been on {u}JavaScript frameworks like React and Next.js{/u}, leveraging my skills to build responsive and impactful web applications.",
+    "contactMe": "Contact me here",
+    "downloadCV": "Download CV",
+    "portraitAlt": "Younes Portrait"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "After {bold}15 years of experience in logistics{/bold}, I decided to pivot towards {bold}web development{/bold}, an area I've recently become certified in. This transition was driven by my proactive approach, leveraging my transferable skills and a strong desire for innovation. {italic}What excites me about programming{/italic} is the opportunity to solve complex problems and create impactful solutions. I {underline}love{/underline} the challenge and satisfaction that come from cracking a tough coding problem. My main technical skills include {bold}HTML, CSS, JavaScript, React, Express, Node.js, Git/Github, Leaflet, Swift, and SwiftUI{/bold}. I'm constantly seeking to expand my knowledge and apply it to real-world projects. I am actively looking for a {bold}new role{/bold} where I can contribute and grow as a web developer.",
+    "paragraph2": "{italic}Outside of coding{/italic}, I'm passionate about {bold}diving, astronomy, and photography{/bold}. I also dedicate time to {bold}coaching Taekwondo{/bold}, reflecting my commitment to teaching and community involvement. I enjoy {bold}exploring new areas{/bold} and am always curious to learn more about {bold}technology and science{/bold}. Currently, I am enhancing my skills in web development technologies and methodologies."
+  },
+  "projects": {
+    "title": "My projects",
+    "kechwaffles": {
+      "description": "E-commerce website for authentic Belgian waffles. Features online ordering, product showcase, and streamlined checkout experience."
+    },
+    "andco": {
+      "description": "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools."
+    },
+    "pahn": {
+      "description": "Talent detection and development platform for French Taekwondo Federation. Features athlete evaluation, performance tracking, and talent management for preparing future champions."
+    },
+    "bron": {
+      "description": "Managed the website and digital presence for the Taekwondo association, enhancing community engagement."
+    },
+    "epsilon": {
+      "description": "Contributed to web projects, focusing on front-end technologies and MongoDB for database management."
+    },
+    "instagrid": {
+      "description": "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms."
+    },
+    "datafight": {
+      "description": "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better."
+    }
+  },
+  "skills": {
+    "title": "My skills"
+  },
+  "experience": {
+    "title": "My experience",
+    "ios": {
+      "title": "iOS Developer Training",
+      "location": "OpenClassrooms",
+      "description": "Completed iOS development training with Swift and SwiftUI, mastering Xcode and data management with CoreData.",
+      "date": "since Sept 2023"
+    },
+    "intern": {
+      "title": "Web Developer Intern",
+      "location": "Epsilon Partners",
+      "description": "Internship focusing on front-end integration with HTML5, CSS3, JavaScript, React, and Next.js; managed databases with MongoDB.",
+      "date": "02/2023 - 06/2023"
+    },
+    "logistics": {
+      "title": "Logistics Technician & Technicien Referent",
+      "location": "Boehringer Ingelheim",
+      "description": "Managed logistics operations, specializing in goods reception, aseptic operations, sterilization, and continuous improvement.",
+      "date": "08/2016 - Present"
+    },
+    "trainer": {
+      "title": "Taekwondo Trainer",
+      "location": "Bron",
+      "description": "Management of athletes, organization of events and competitions, and development of training programs.",
+      "date": "Since September 2013"
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "Please contact me directly at",
+    "or": "or through this form.",
+    "email": "Your email",
+    "message": "Your message",
+    "submit": "Submit",
+    "sending": "Sending..."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "about": "About this website:",
+    "tech": "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
+  }
+}
