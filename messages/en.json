@@ -1,90 +1,485 @@
 {
+  "meta": {
+    "title": "Younes Ouasmi — Full-stack & mobile developer, AI solutions",
+    "description": "I build web and mobile products and help companies put AI to concrete use: document drafting, data analysis, automation, RAG and specialised agents."
+  },
   "nav": {
     "home": "Home",
-    "about": "About",
     "projects": "Projects",
+    "services": "AI & services",
+    "experience": "Background",
     "skills": "Skills",
-    "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close menu",
+    "cv": "Resume",
+    "skip": "Skip to content",
+    "themeToLight": "Switch to light theme",
+    "themeToDark": "Switch to dark theme",
+    "language": "Language",
+    "switchTo": "Switch to {language}"
   },
-  "intro": {
-    "greeting": "Hello, I'm Younes Ouasmi.",
-    "description": "After a successful {strong}15-year career in logistics{/strong}, I pivoted to {strong}web development{/strong}, a field I am deeply passionate about. I find joy in {em}creating and innovating on the web{/em}. My recent focus has been on {u}JavaScript frameworks like React and Next.js{/u}, leveraging my skills to build responsive and impactful web applications.",
-    "contactMe": "Contact me here",
-    "downloadCV": "Download CV",
-    "portraitAlt": "Younes Portrait"
-  },
-  "about": {
-    "title": "About me",
-    "paragraph1": "After {bold}15 years of experience in logistics{/bold}, I decided to pivot towards {bold}web development{/bold}, an area I've recently become certified in. This transition was driven by my proactive approach, leveraging my transferable skills and a strong desire for innovation. {italic}What excites me about programming{/italic} is the opportunity to solve complex problems and create impactful solutions. I {underline}love{/underline} the challenge and satisfaction that come from cracking a tough coding problem. My main technical skills include {bold}HTML, CSS, JavaScript, React, Express, Node.js, Git/Github, Leaflet, Swift, and SwiftUI{/bold}. I'm constantly seeking to expand my knowledge and apply it to real-world projects. I am actively looking for a {bold}new role{/bold} where I can contribute and grow as a web developer.",
-    "paragraph2": "{italic}Outside of coding{/italic}, I'm passionate about {bold}diving, astronomy, and photography{/bold}. I also dedicate time to {bold}coaching Taekwondo{/bold}, reflecting my commitment to teaching and community involvement. I enjoy {bold}exploring new areas{/bold} and am always curious to learn more about {bold}technology and science{/bold}. Currently, I am enhancing my skills in web development technologies and methodologies."
-  },
-  "projects": {
-    "title": "My projects",
-    "kechwaffles": {
-      "description": "E-commerce website for authentic Belgian waffles. Features online ordering, product showcase, and streamlined checkout experience."
-    },
-    "andco": {
-      "description": "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools."
-    },
-    "pahn": {
-      "description": "Talent detection and development platform for French Taekwondo Federation. Features athlete evaluation, performance tracking, and talent management for preparing future champions."
-    },
-    "bron": {
-      "description": "Managed the website and digital presence for the Taekwondo association, enhancing community engagement."
-    },
-    "epsilon": {
-      "description": "Contributed to web projects, focusing on front-end technologies and MongoDB for database management."
-    },
-    "instagrid": {
-      "description": "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms."
-    },
-    "datafight": {
-      "description": "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better."
+  "hero": {
+    "availability": "Open to B2B projects and opportunities",
+    "role": "Full-stack & mobile developer · AI solutions for businesses",
+    "statement": "I build web and mobile products, and I help companies get <em>concrete results</em> from AI.",
+    "lead": "Three apps currently launching and a video analysis platform whose AI models I trained, all designed and built on my own. Before code: 15 years in logistics, including the pharmaceutical industry, so I know what a poorly tooled process costs. And 35 years of taekwondo, from the French national team to the Paris 2024 Olympic organizing committee.",
+    "ctaProject": "Let's talk about your project",
+    "ctaCv": "Download resume",
+    "portraitAlt": "Portrait of Younes Ouasmi",
+    "stats": {
+      "products": {
+        "value": "3",
+        "label": "products launching, built solo"
+      },
+      "ai": {
+        "value": "AI",
+        "label": "trained models, RAG, agents, vision"
+      },
+      "olympics": {
+        "value": "Paris 2024",
+        "label": "Olympic taekwondo organizing committee"
+      },
+      "field": {
+        "value": "15 years",
+        "label": "of hands-on logistics experience"
+      }
     }
   },
-  "skills": {
-    "title": "My skills"
+  "common": {
+    "copyEmail": "Copy email",
+    "emailCopied": "Email copied to clipboard",
+    "copyFailed": "Could not copy, the address is: {email}",
+    "linkedin": "LinkedIn profile",
+    "github": "GitHub profile",
+    "newTab": "(new tab)"
+  },
+  "featured": {
+    "index": "01",
+    "title": "Products in progress",
+    "intro": "An AI platform and three apps I design, build and ship end to end: models, product, design, code, payments and store release.",
+    "viewDetails": "View details",
+    "visitSite": "Visit site",
+    "close": "Close",
+    "labels": {
+      "status": "Status",
+      "role": "Role",
+      "year": "Year",
+      "highlights": "What I built",
+      "stack": "Stack"
+    },
+    "role": "Solo: product, design, development, release",
+    "screenshotAlt": "Home page of the {name} website",
+    "kntx": {
+      "tagline": "Turning fight video into actionable tactical data.",
+      "status": "In development · private platform",
+      "role": "Solo: AI, data, product, development",
+      "description": "An end-to-end AI platform for taekwondo fight analysis: experts annotate videos, I train my own models on that data, a video pipeline detects, tracks and classifies every action, then coaches review and correct the analysis. Every correction feeds the next training cycle.",
+      "highlights": [
+        "My own models, trained on expert-annotated fights: multi-task BiLSTM (technique, target, role), fine-tuned MotionBERT Transformer, 1D CNN action spotter, benchmarked against graph networks (ST-GCN, CTR-GCN)",
+        "Computer vision: YOLO fine-tuned on 3 classes (blue fighter, red fighter, referee), BoT-SORT tracking, RTMPose pose estimation, homographic mat calibration and scoreboard OCR",
+        "Active learning loop: coach corrections retrain the model, which is only deployed after a quality gate (macro F1 on a frozen test set)",
+        "Tactical memory on pgvector: similar-action search from embeddings produced by my models and by Claude Haiku summaries (HNSW index, p95 of 16.5 ms over 100,000 vectors in a local benchmark)",
+        "LLM data analysis: athlete reports (Llama 3.3 via Groq) and metric suggestions (Gemini)",
+        "Desktop (Electron) and iPad (SwiftUI + Vision) annotation tools, GPU inference on Modal, GDPR consent for biometric data"
+      ],
+      "visualAlt": "AI analysis of a taekwondo fight: both fighters detected, with tracking IDs and pose skeletons",
+      "visualCaption": "YOLO 3 classes · BoT-SORT · RTMPose",
+      "loopTitle": "Learning loop",
+      "loop": [
+        "Expert annotation",
+        "Model training",
+        "Automatic video analysis",
+        "Coach correction",
+        "Retraining"
+      ]
+    },
+    "memotale": {
+      "tagline": "Memories told out loud become the book of a life.",
+      "status": "Launching soon on the App Store and Google Play",
+      "description": "You record a memory in your own language, Darija included. AI transcribes it, dates it, places it, then writes it faithfully, without inventing a single fact, and inserts it at the right point of a chronological book the whole family can read and add to.",
+      "highlights": [
+        "AI transcription and writing, every sentence stays linked to the original recording",
+        "One continuous, chronological book: neighbouring transitions are rewritten with each new memory",
+        "Six languages including Darija, Arabic right-to-left UI and Chinese books",
+        "Private family sharing, free lifetime reading for relatives",
+        "Subscriptions through Apple In-App Purchase and Google Play Billing"
+      ]
+    },
+    "momochee": {
+      "tagline": "Small missions make great adventures.",
+      "status": "Web live · iOS soon · Android early access",
+      "description": "A family gamification platform: parents set the rules (chores, school, behaviour), children complete quests, grow their pixel-art creature and trade their points for real rewards.",
+      "highlights": [
+        "Two experiences in one app: gamified for children, calm and efficient for parents",
+        "Pixel-art creature engine: 16 species, evolution, fusion into unique hybrids",
+        "AI homework correction from a photo, with a score and encouragement",
+        "Turborepo monorepo: Next.js 15 web app and REST API consumed by the Expo app",
+        "Stripe payments, push notifications, biometrics and family chat"
+      ]
+    },
+    "babyiq": {
+      "tagline": "Every day is a chance to grow your baby's mind.",
+      "status": "Web app live · iOS and Android soon",
+      "description": "A flashcard app inspired by the Doman method for children aged 0 to 6. Sessions last a few seconds, several times a day: the app plans and rotates the cards, so the parent only has to press “Start”.",
+      "highlights": [
+        "Offline-first sessions: showing cards never depends on the network",
+        "Dynamically generated quantity cards with no overlapping dots",
+        "Automatic card rotation and a daily plan for each child",
+        "No testing of the child, personal data kept to the bare minimum",
+        "Cross-platform subscription: Apple In-App Purchase, Google Play Billing and Stripe"
+      ]
+    }
+  },
+  "services": {
+    "index": "02",
+    "title": "What AI can do for you",
+    "lead": "Everyone talks about “AI-powered” companies. Few people say what it concretely changes. Here are specific use cases I can analyse, prototype and integrate into your tools.",
+    "manifestoTitle": "AI, yes. But used well.",
+    "manifestoText": "A language model is not a magic wand: poorly scoped, it makes things up, costs a lot and worries teams. Used well, it saves time on specific tasks, with results you can check.",
+    "casesLabel": "Use cases",
+    "labels": {
+      "today": "Today",
+      "concretely": "Concretely",
+      "impact": "What it changes",
+      "guardrail": "Guardrail",
+      "before": "Before",
+      "after": "After"
+    },
+    "cases": {
+      "docs": {
+        "name": "Document drafting",
+        "short": "Minutes, procedures, tender responses",
+        "today": "Your teams spend hours writing, rephrasing and formatting documents from information that already exists.",
+        "examples": [
+          "A recorded meeting becomes structured minutes, with decisions and assigned actions",
+          "Field notes become a standard operating procedure in your house style",
+          "A first draft of a tender response, built from your past answers and references"
+        ],
+        "impact": "Teams review and approve instead of starting from a blank page, and documents become more consistent.",
+        "guardrail": "Every document is reviewed by a person before it goes out, and the AI only writes from your sources.",
+        "before": [
+          "Scattered notes",
+          "Manual writing",
+          "Formatting",
+          "Review"
+        ],
+        "after": [
+          "Recording or notes",
+          "Generated draft",
+          "Human review"
+        ]
+      },
+      "data": {
+        "name": "Data & cost analysis",
+        "short": "Purchasing, stock, invoices: see where money goes",
+        "today": "The data exists (ERP exports, invoices, spreadsheets) but nobody has time to cross-check it and spot drift.",
+        "examples": [
+          "Supplier invoice analysis to spot duplicates, price gaps and unjustified increases",
+          "Detection of dormant stock and recurring shortages from historical data",
+          "Plain-language questions to your data, such as “Which suppliers raised their prices this quarter?”, with the calculation shown"
+        ],
+        "impact": "Savings opportunities surface regularly, quantified and verifiable, instead of waiting for a yearly audit.",
+        "guardrail": "Calculations are done by verifiable code, not guessed by the model: AI is there to explore and explain.",
+        "before": [
+          "Excel exports",
+          "Manual cross-checks",
+          "One-off analysis"
+        ],
+        "after": [
+          "Connected data",
+          "Flagged anomalies",
+          "Decision"
+        ]
+      },
+      "automation": {
+        "name": "Task automation",
+        "short": "Data entry, sorting, extraction, follow-ups",
+        "today": "Copying data from a PDF into a spreadsheet, sorting emails, chasing customers: repetitive tasks that tie up skilled people.",
+        "examples": [
+          "Data extraction from invoices, purchase orders or PDF forms into your ERP or spreadsheet",
+          "Sorting incoming emails (quotes, complaints, invoices) and routing them to the right person with a summary",
+          "Follow-ups and weekly reports prepared and sent automatically"
+        ],
+        "impact": "Less re-typing, fewer copy errors, and time given back to teams for work that needs judgement.",
+        "guardrail": "Uncertain cases are flagged and approved by a person, and every action is logged.",
+        "before": [
+          "Receive",
+          "Read",
+          "Re-type",
+          "Check"
+        ],
+        "after": [
+          "Receive",
+          "Automatic extraction",
+          "Review of doubtful cases"
+        ]
+      },
+      "rag": {
+        "name": "Assistant on your documents (RAG)",
+        "short": "Sourced answers drawn from your documentation",
+        "today": "The information is in your procedures, contracts or knowledge bases, but finding it takes time, and the wrong version circulates.",
+        "examples": [
+          "An internal assistant that answers staff questions from your procedures, with a cited, clickable source",
+          "First-line customer support grounded only in your product documentation",
+          "Access rights respected: each person only gets answers from documents they are allowed to read"
+        ],
+        "impact": "Answers arrive in seconds, always with their source, and experts are interrupted less for repetitive questions.",
+        "guardrail": "When the documentation does not contain the answer, the assistant says so instead of making it up.",
+        "before": [
+          "Question",
+          "Search through folders",
+          "Ask an expert"
+        ],
+        "after": [
+          "Question",
+          "Sourced answer",
+          "One-click check"
+        ]
+      },
+      "agents": {
+        "name": "Specialised agents",
+        "short": "Multi-step tasks, kept under control",
+        "today": "Some tasks take several steps (search, compare, qualify, write) and vary too much for classic automation.",
+        "examples": [
+          "A monitoring agent that watches chosen sources (tenders, regulation, competitors) and sends you a summary",
+          "A qualification agent that enriches and prioritises incoming requests before a salesperson handles them",
+          "A file preparation agent that gathers documents, checks nothing is missing and prepares a draft"
+        ],
+        "impact": "The preparatory steps are done, and your teams step in where their expertise matters.",
+        "guardrail": "A limited scope of action, visible steps and human approval before any committing action.",
+        "before": [
+          "Search",
+          "Compare",
+          "Summarise",
+          "Decide"
+        ],
+        "after": [
+          "Agent: search and summary",
+          "You: decision"
+        ]
+      },
+      "custom": {
+        "name": "Models trained on your data",
+        "short": "Custom vision, detection, classification",
+        "today": "Some needs go beyond general-purpose models: analysing video, recognising movements or classifying data that is very specific to your business.",
+        "examples": [
+          "Video analysis: automatically detect, track and classify movements or events, as I do for taekwondo fights",
+          "A classification model trained on your own annotated data, when a general-purpose model gets it wrong or costs too much to run",
+          "Similarity search across your history (similar cases, situations or parts) with embeddings and pgvector"
+        ],
+        "impact": "A model specialised on your problem, running on your infrastructure and improving with your teams' corrections.",
+        "guardrail": "A frozen test set and a quality bar to clear before every release; uncertain cases are still approved by a person.",
+        "before": [
+          "Manual viewing",
+          "Note-taking",
+          "Data entry",
+          "Analysis"
+        ],
+        "after": [
+          "Video or data",
+          "Automatic analysis",
+          "Human correction",
+          "Retraining"
+        ]
+      }
+    },
+    "process": {
+      "title": "How I work",
+      "steps": [
+        {
+          "title": "Understanding your needs",
+          "text": "A conversation to understand your processes, spot repetitive or costly tasks and the data available. Together we define what success looks like."
+        },
+        {
+          "title": "Measured prototype",
+          "text": "A first version on your real documents or data, tested on real cases, with criteria set in advance."
+        },
+        {
+          "title": "Integration",
+          "text": "Production rollout into your existing tools, with security, access rights and GDPR compliance planned from the start."
+        },
+        {
+          "title": "Follow-up & handover",
+          "text": "Measuring results, adjusting, and training your teams so they stay in control."
+        }
+      ]
+    },
+    "principles": {
+      "title": "My principles",
+      "items": [
+        "Start from the need, not the tool.",
+        "If simple automation is enough, no AI needed.",
+        "Measure before and after, on real cases.",
+        "Keep a human in the loop for what matters.",
+        "Your data stays under control: access, hosting, confidentiality."
+      ]
+    },
+    "proof": {
+      "title": "Already at work in my projects",
+      "items": [
+        {
+          "name": "KNTX Labs",
+          "text": "Fight video analysis: models trained on my own annotated data, active learning, tactical memory on pgvector, LLM-generated reports."
+        },
+        {
+          "name": "RegulaAI",
+          "text": "RAG assistant for pharma: verifiable citations, refusal when information is missing, access rights enforced at retrieval, audit trail."
+        },
+        {
+          "name": "MemoTale",
+          "text": "Voice becomes a written story, faithful to the facts told, in six languages."
+        },
+        {
+          "name": "Momochee",
+          "text": "AI homework correction from a simple photo."
+        }
+      ]
+    },
+    "cta": "Let's talk about your needs",
+    "ctaHint": "A first conversation to see whether AI is useful for you, and where it is not."
+  },
+  "work": {
+    "index": "03",
+    "title": "Other work",
+    "intro": "Business SaaS, client websites and prototypes.",
+    "filterLabel": "Filter projects",
+    "filters": {
+      "all": "All",
+      "ai": "AI",
+      "saas": "SaaS",
+      "web": "Web",
+      "mobile": "Mobile"
+    },
+    "count": "{count, plural, one {# project} other {# projects}}",
+    "imageAlt": "Preview of the {title} project",
+    "pocBadge": "Proof of concept",
+    "regulaai": {
+      "description": "Proof of concept for pharma and MedTech: an assistant that answers only from the controlled documents the user is allowed to read, with verifiable citations, an explicit refusal when information is missing, and an audit trail.",
+      "pipeline": [
+        "Controlled documents",
+        "Hybrid search + reranking",
+        "Evidence check",
+        "Sourced answer or refusal"
+      ]
+    },
+    "andco": {
+      "description": "SaaS platform for martial arts club management: online event registration, automatic tournament brackets, member management and automated communication."
+    },
+    "pahn": {
+      "description": "Talent detection and tracking platform for the French Taekwondo Federation: athlete evaluation and performance tracking."
+    },
+    "datafight": {
+      "description": "Web app for analysing taekwondo fights, helping coaches and athletes track performance and plan their strategy."
+    },
+    "kechwaffles": {
+      "description": "E-commerce website for Belgian waffles: online ordering, product showcase and streamlined checkout."
+    },
+    "epsilon": {
+      "description": "Internship at Epsilon Partners: front-end integration with React and Next.js, data management with MongoDB."
+    },
+    "bron": {
+      "description": "Website and online presence of the Bron taekwondo club."
+    },
+    "instagrid": {
+      "description": "iOS app in Swift and SwiftUI, built during the OpenClassrooms training."
+    }
   },
   "experience": {
-    "title": "My experience",
+    "index": "04",
+    "title": "Background",
+    "bio": [
+      "After 15 years in logistics, including the pharmaceutical industry (aseptic operations, sterilisation, continuous improvement), I moved into web and mobile development.",
+      "That field experience is an asset: I know the reality of processes, procedures and quality constraints, and I build tools for the people who actually use them. Taekwondo is my other field of expertise: KNTX Labs was born where the two meet."
+    ],
+    "sport": {
+      "title": "Elite taekwondo",
+      "items": [
+        {
+          "title": "French national team",
+          "text": "Former athlete of the French national taekwondo team."
+        },
+        {
+          "title": "Paris 2024",
+          "text": "Member of the taekwondo organizing committee at the Olympic Games."
+        },
+        {
+          "title": "35 years on the mat",
+          "text": "Competitor, coach and club director."
+        }
+      ]
+    },
     "ios": {
       "title": "iOS Developer Training",
       "location": "OpenClassrooms",
-      "description": "Completed iOS development training with Swift and SwiftUI, mastering Xcode and data management with CoreData.",
-      "date": "since Sept 2023"
+      "description": "iOS development training with Swift and SwiftUI, Xcode, and data management with CoreData.",
+      "date": "Since Sept. 2023"
     },
     "intern": {
       "title": "Web Developer Intern",
       "location": "Epsilon Partners",
-      "description": "Internship focusing on front-end integration with HTML5, CSS3, JavaScript, React, and Next.js; managed databases with MongoDB.",
-      "date": "02/2023 - 06/2023"
+      "description": "Internship focused on front-end integration with HTML5, CSS3, JavaScript, React and Next.js, and database management with MongoDB.",
+      "date": "02/2023 – 06/2023"
     },
     "logistics": {
-      "title": "Logistics Technician & Technicien Referent",
+      "title": "Logistics Technician & Lead Technician",
       "location": "Boehringer Ingelheim",
-      "description": "Managed logistics operations, specializing in goods reception, aseptic operations, sterilization, and continuous improvement.",
-      "date": "08/2016 - Present"
+      "description": "Logistics operations, specialising in goods reception, aseptic operations, sterilisation and continuous improvement.",
+      "date": "08/2016 – Present"
     },
     "trainer": {
-      "title": "Taekwondo Trainer",
+      "title": "Taekwondo Coach",
       "location": "Bron",
-      "description": "Management of athletes, organization of events and competitions, and development of training programs.",
-      "date": "Since September 2013"
+      "description": "Athlete management, organisation of events and competitions, development of training programmes.",
+      "date": "Since Sept. 2013"
     }
   },
+  "skills": {
+    "index": "05",
+    "title": "Skills",
+    "groups": {
+      "ai": "Applied AI & LLMs",
+      "ml": "Machine learning & vision",
+      "front": "Front-end",
+      "mobile": "Mobile",
+      "back": "Back-end & data",
+      "tools": "Tooling"
+    },
+    "aiItems": [
+      "LLM integration: OpenAI, Azure OpenAI, Claude, Gemini, Llama (Groq)",
+      "Vercel AI SDK",
+      "RAG: pgvector, hybrid search, reranking",
+      "Agents: LangGraph, tool calling",
+      "LLM data analysis: reports, metric suggestions",
+      "Evaluation and guardrails: hallucinations, prompt injection",
+      "Automation: APIs, webhooks, job queues (BullMQ)"
+    ],
+    "mlItems": [
+      "PyTorch model training: multi-task BiLSTM, Transformer, 1D CNN, GCN",
+      "Fine-tuning and transfer learning: YOLO, MotionBERT",
+      "Computer vision: detection, tracking (BoT-SORT), pose (RTMPose), homography, OCR",
+      "Dataset building: annotation tools, ontology, feature engineering",
+      "MLOps: active learning, quality gates, calibration, Weights & Biases",
+      "Embeddings and vector search: pgvector (HNSW), MiniLM, ONNX",
+      "Python · FastAPI · serverless GPU inference (Modal)"
+    ]
+  },
   "contact": {
-    "title": "Contact me",
-    "description": "Please contact me directly at",
-    "or": "or through this form.",
-    "email": "Your email",
-    "message": "Your message",
-    "submit": "Submit",
-    "sending": "Sending..."
+    "index": "06",
+    "title": "Let's talk about your project.",
+    "lead": "A project, a role, or a question about AI in your business: write to me directly or through this form.",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "name@company.com",
+    "messageLabel": "Your message",
+    "messagePlaceholder": "A few words about your need or the role…",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Message sent. Thank you, I'll get back to you soon.",
+    "direct": "Direct contact"
   },
   "footer": {
     "rights": "All rights reserved.",
-    "about": "About this website:",
-    "tech": "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
+    "built": "Designed and built by Younes Ouasmi with Next.js, TypeScript, Tailwind CSS and Framer Motion.",
+    "backToTop": "Back to top"
   }
 }

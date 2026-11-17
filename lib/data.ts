@@ -1,177 +1,215 @@
-import React from "react";
+import type { StaticImageData } from "next/image";
 
-import { MdOutlineSportsMartialArts } from "react-icons/md";
-import openClassroomsImg from "@/public/oc.png"; // Placeholder, replace with actual image
-import epsilonPartnersImg from "@/public/epsilon.png"; // Placeholder, replace with actual image
-import taekwondoImg from "@/public/btkd.png"; // Placeholder, replace with actual image
-import taekwondoDataImg from "@/public/datafight.png"; // Placeholder, replace with actual image
-import pahnImg from "@/public/pahntkd.png";
-import andcoImg from "@/public/andco.png";
+import memotaleImg from "@/public/projects/memotale.webp";
+import momocheeImg from "@/public/projects/momochee.webp";
+import babyiqImg from "@/public/projects/babyiq.webp";
+import kntxImg from "@/public/projects/kntx-vision.webp";
 import kechwafflesImg from "@/public/kechwaffles.png";
-import { FcMultipleDevices } from "react-icons/fc";
-import { IoIosAppstore } from "react-icons/io";
-import { GrUserWorker } from "react-icons/gr";
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiPostgresql,
-  SiPrisma,
-  SiDocker,
-  SiGit,
-  SiSwift,
-  SiTailwindcss,
-  SiFramer
-} from "react-icons/si";
-import { MdSecurity } from "react-icons/md";
+import andcoImg from "@/public/andco.png";
+import pahnImg from "@/public/pahntkd.png";
+import datafightImg from "@/public/datafight.png";
+import bronImg from "@/public/btkd.png";
+import epsilonImg from "@/public/epsilon.png";
+import instagridImg from "@/public/oc.png";
 
-
-
-
+export const contact = {
+  email: "y.ouasmi@gmail.com",
+  linkedin: "https://www.linkedin.com/in/younes-ouasmi-468926142/",
+  github: "https://github.com/CODEFORYOU69",
+  cv: "/younesouasmicv.pdf",
+} as const;
 
 export const links = [
-  {
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+  { name: "Projects", key: "projects", hash: "#projects" },
+  { name: "Services", key: "services", hash: "#services" },
+  { name: "Experience", key: "experience", hash: "#experience" },
+  { name: "Skills", key: "skills", hash: "#skills" },
+  { name: "Contact", key: "contact", hash: "#contact" },
 ] as const;
 
-export const experiencesData = [
-  {
-    slug: "ios",
-    title: "iOS Developer Training",
-    location: "OpenClassrooms",
-    description:
-      "Completed iOS development training with Swift and SwiftUI, mastering Xcode and data management with CoreData.",
-    icon: React.createElement(IoIosAppstore),
-    date: "since sept 2023", // Replace with actual dates if available
-  },
-  {
-    slug: "intern",
-    title: "Web Developer Intern",
-    location: "Epsilon Partners",
-    description:
-      "Internship focusing on front-end integration with HTML5, CSS3, JavaScript, React, and Next.js; managed databases with MongoDB.",
-    icon: React.createElement(FcMultipleDevices),
-    date: "02/2023 - 06/2023 ", // Replace with actual dates if available
-  },
-  {
-    slug: "logistics",
-    title: "Logistics Technician & Technicien Referent",
-    location: "Boehringer Ingelheim",
-    description:
-      "Managed logistics operations, specializing in goods reception, aseptic operations, sterilization, and continuous improvement.",
-    icon: React.createElement(GrUserWorker),
-    date: "08/2016 - Present", // Adjust based on your tenure
-  },
-  {
-    slug: "trainer",
-    title: "Taekwondo Trainer",
-    location: "Bron",
-    description:
-      "Management of athletes, organization of events and competitions, and development of training programs.",
-    icon: React.createElement(MdOutlineSportsMartialArts), // Assuming FaBelt as a placeholder; consider using a more appropriate icon if available
-    date: "Since September 2013",
-  },
-] as const;
+export type FeaturedProject = {
+  slug: "kntx" | "memotale" | "momochee" | "babyiq";
+  name: string;
+  /** Public URL; omitted for private platforms (no "visit site" link is rendered). */
+  url?: string;
+  year: string;
+  image: StaticImageData;
+  /** Brand color of the product, used as a hover/accent cue only. */
+  accent: string;
+  stack: readonly string[];
+};
 
-export const projectsData = [
+export const featuredProjects: readonly FeaturedProject[] = [
   {
-    title: "Kechwaffles",
-    slug: "kechwaffles",
-    description: "E-commerce website for authentic Belgian waffles. Features online ordering, product showcase, and streamlined checkout experience.",
-    tags: ["Next.js", "React", "E-commerce"],
-    imageUrl: kechwafflesImg,
+    slug: "kntx",
+    name: "KNTX Labs",
+    year: "2026",
+    image: kntxImg,
+    accent: "#2563EB",
+    stack: [
+      "PyTorch",
+      "YOLO",
+      "RTMPose",
+      "MotionBERT",
+      "FastAPI",
+      "Modal (GPU)",
+      "pgvector",
+      "Weights & Biases",
+      "Next.js 15",
+      "Prisma",
+      "Electron",
+      "SwiftUI",
+    ],
   },
   {
-    title: "AndCo",
-    slug: "andco",
-    description: "Comprehensive SaaS platform for martial arts club management. Includes online event registration, automatic tournament brackets, member management, and automated communication tools.",
-    tags: ["Next.js", "React", "MongoDB", "SaaS"],
-    imageUrl: andcoImg,
+    slug: "memotale",
+    name: "MemoTale",
+    url: "https://memotale.app",
+    year: "2026",
+    image: memotaleImg,
+    accent: "#B5562F",
+    stack: [
+      "Expo / React Native",
+      "Convex",
+      "TanStack Start",
+      "Vercel AI SDK",
+      "Gemini",
+      "better-auth",
+      "Apple IAP · Play Billing",
+    ],
   },
   {
-    title: "PAHN TKD Champ",
-    slug: "pahn",
-    description: "Talent detection and development platform for French Taekwondo Federation. Features athlete evaluation, performance tracking, and talent management for preparing future champions.",
-    tags: ["Next.js", "TypeScript", "Talent Detection", "FFTDA"],
-    imageUrl: pahnImg,
+    slug: "momochee",
+    name: "Momochee",
+    url: "https://momochee.com",
+    year: "2026",
+    image: momocheeImg,
+    accent: "#2F80C0",
+    stack: [
+      "Next.js 15",
+      "Expo / React Native",
+      "Prisma",
+      "PostgreSQL · Supabase",
+      "Better Auth",
+      "Stripe",
+      "Turborepo",
+    ],
   },
   {
-    title: "Bron Tkd website",
-    slug: "bron",
-    description: "Managed the website and digital presence for the Taekwondo association, enhancing community engagement.",
-    tags: ["Website Management", "Community Engagement"],
-    imageUrl: taekwondoImg,
+    slug: "babyiq",
+    name: "BabyIQ",
+    url: "https://babyiqapp.com",
+    year: "2026",
+    image: babyiqImg,
+    accent: "#FF6B6B",
+    stack: [
+      "Expo / React Native",
+      "Convex",
+      "TanStack Start",
+      "better-auth",
+      "Stripe · Apple IAP · Play Billing",
+      "PostHog",
+      "Cloudflare R2",
+    ],
   },
-  {
-    title: "Epsilon partners site",
-    slug: "epsilon",
-    description: "Contributed to web projects, focusing on front-end technologies and MongoDB for database management.",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MongoDB"],
-    imageUrl: epsilonPartnersImg,
-  },
-  {
-    title: "Instagrid",
-    slug: "instagrid",
-    description: "Developed iOS applications using Swift and SwiftUI during my training at OpenClassrooms.",
-    tags: ["Swift", "SwiftUI", "Xcode"],
-    imageUrl: openClassroomsImg,
-  },
-  {
-    title: "DataFight",
-    slug: "datafight",
-    description: "A web app designed for analyzing Taekwondo fights and improving training methodologies. Responsive and user-friendly, it helps coaches and athletes track performance and strategize better.",
-    tags: ["Next.js", "MongoDB", "Express"],
-    imageUrl: taekwondoDataImg, // Placeholder, replace with actual image path
-  },
-
-] as const;
-
-
-export const skillsData = [
-  { name: "HTML", icon: React.createElement(SiHtml5), color: "#E34F26" },
-  { name: "CSS", icon: React.createElement(SiCss3), color: "#1572B6" },
-  { name: "JavaScript", icon: React.createElement(SiJavascript), color: "#F7DF1E" },
-  { name: "TypeScript", icon: React.createElement(SiTypescript), color: "#3178C6" },
-  { name: "React", icon: React.createElement(SiReact), color: "#61DAFB" },
-  { name: "Next.js", icon: React.createElement(SiNextdotjs), color: "#000000" },
-  { name: "Node.js", icon: React.createElement(SiNodedotjs), color: "#339933" },
-  { name: "Express", icon: React.createElement(SiExpress), color: "#000000" },
-  { name: "MongoDB", icon: React.createElement(SiMongodb), color: "#47A248" },
-  { name: "PostgreSQL", icon: React.createElement(SiPostgresql), color: "#4169E1" },
-  { name: "Prisma", icon: React.createElement(SiPrisma), color: "#2D3748" },
-  { name: "Docker", icon: React.createElement(SiDocker), color: "#2496ED" },
-  { name: "Git", icon: React.createElement(SiGit), color: "#F05032" },
-  { name: "Swift", icon: React.createElement(SiSwift), color: "#FA7343" },
-  { name: "SwiftUI", icon: React.createElement(SiSwift), color: "#FA7343" },
-  { name: "Better Auth", icon: React.createElement(MdSecurity), color: "#10B981" },
-  { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss), color: "#06B6D4" },
-  { name: "Framer Motion", icon: React.createElement(SiFramer), color: "#FF0055" },
 ];
+
+export const workCategories = ["all", "ai", "saas", "web", "mobile"] as const;
+export type WorkCategory = (typeof workCategories)[number];
+
+export type WorkProject = {
+  slug: string;
+  title: string;
+  categories: readonly Exclude<WorkCategory, "all">[];
+  tags: readonly string[];
+  image?: StaticImageData;
+};
+
+export const workProjects: readonly WorkProject[] = [
+  {
+    slug: "regulaai",
+    title: "RegulaAI",
+    categories: ["ai", "web"],
+    tags: ["RAG", "LangGraph", "pgvector", "FastAPI", "Next.js"],
+  },
+  {
+    slug: "andco",
+    title: "AndCo",
+    categories: ["saas", "web"],
+    tags: ["Next.js", "React", "MongoDB"],
+    image: andcoImg,
+  },
+  {
+    slug: "pahn",
+    title: "PAHN TKD Champ",
+    categories: ["web"],
+    tags: ["Next.js", "TypeScript"],
+    image: pahnImg,
+  },
+  {
+    slug: "datafight",
+    title: "DataFight",
+    categories: ["web"],
+    tags: ["Next.js", "MongoDB", "Express"],
+    image: datafightImg,
+  },
+  {
+    slug: "kechwaffles",
+    title: "Kechwaffles",
+    categories: ["web"],
+    tags: ["Next.js", "React", "E-commerce"],
+    image: kechwafflesImg,
+  },
+  {
+    slug: "epsilon",
+    title: "Epsilon Partners",
+    categories: ["web"],
+    tags: ["React", "Next.js", "MongoDB"],
+    image: epsilonImg,
+  },
+  {
+    slug: "bron",
+    title: "Bron Taekwondo",
+    categories: ["web"],
+    tags: ["Website"],
+    image: bronImg,
+  },
+  {
+    slug: "instagrid",
+    title: "Instagrid",
+    categories: ["mobile"],
+    tags: ["Swift", "SwiftUI", "Xcode"],
+    image: instagridImg,
+  },
+];
+
+export const serviceCases = ["docs", "data", "automation", "rag", "agents", "custom"] as const;
+export type ServiceCase = (typeof serviceCases)[number];
+
+export const experienceSlugs = ["ios", "intern", "logistics", "trainer"] as const;
+
+/** Skill groups. "ai" and "ml" are translated (descriptive items), the others are tool names. */
+export const skillGroups = [
+  { key: "ai", translated: true, items: [] as readonly string[] },
+  { key: "ml", translated: true, items: [] as readonly string[] },
+  {
+    key: "front",
+    translated: false,
+    items: ["TypeScript", "JavaScript", "React", "Next.js", "TanStack", "Tailwind CSS", "Framer Motion", "HTML / CSS"],
+  },
+  {
+    key: "mobile",
+    translated: false,
+    items: ["React Native", "Expo", "Swift", "SwiftUI"],
+  },
+  {
+    key: "back",
+    translated: false,
+    items: ["Node.js", "Express", "Convex", "PostgreSQL", "Supabase", "Prisma", "MongoDB", "Better Auth", "Stripe"],
+  },
+  {
+    key: "tools",
+    translated: false,
+    items: ["Git", "Docker", "Turborepo", "PostHog", "Cloudflare R2", "Vercel"],
+  },
+] as const;

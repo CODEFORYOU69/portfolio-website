@@ -1,18 +1,26 @@
 "use client";
 
 import { useTheme } from "@/context/theme-context";
-import React from "react";
-import { BsMoon, BsSun } from "react-icons/bs";
+import { useTranslations } from "next-intl";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
+  const t = useTranslations("nav");
+  const label = theme === "light" ? t("themeToDark") : t("themeToLight");
 
   return (
     <button
-      className="fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
-      onClick={toggleTheme}
+      type="button"
+      onClick={(event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        toggleTheme({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 });
+      }}
+      className="grid h-9 w-9 place-items-center rounded-full text-fg/80 transition-colors hover:bg-fg/[0.06] hover:text-fg"
+      aria-label={label}
+      title={label}
     >
-      {theme === "light" ? <BsSun /> : <BsMoon />}
+      {theme === "light" ? <FiMoon aria-hidden="true" /> : <FiSun aria-hidden="true" />}
     </button>
   );
 }

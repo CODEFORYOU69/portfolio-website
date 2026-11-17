@@ -2,14 +2,185 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --line-color: #e5e7eb;
+@layer base {
+  :root {
+    --c-bg: 244 242 238;
+    --c-surface: 251 250 247;
+    --c-fg: 17 17 16;
+    --c-muted: 98 97 92;
+    --c-accent: 180 48 14;
+    --c-on-accent: 255 255 255;
+    color-scheme: light;
+  }
+
+  html.dark {
+    --c-bg: 12 12 11;
+    --c-surface: 22 22 20;
+    --c-fg: 237 235 230;
+    --c-muted: 158 156 148;
+    --c-accent: 255 112 66;
+    --c-on-accent: 17 17 16;
+    color-scheme: dark;
+  }
+
+  /* Contrast band: ink section in light mode, slightly raised surface in dark mode. */
+  .theme-invert {
+    --c-bg: 20 20 19;
+    --c-surface: 31 31 29;
+    --c-fg: 237 235 230;
+    --c-muted: 165 163 155;
+    --c-accent: 255 112 66;
+    --c-on-accent: 17 17 16;
+    color-scheme: dark;
+  }
+
+  html.dark .theme-invert {
+    --c-bg: 20 20 18;
+    --c-surface: 30 30 27;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent text-on-accent;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
 }
 
-html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted;
+  }
+
+  .hairline {
+    @apply border-fg/10;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-fg/15 px-2.5 py-1 font-mono text-[0.7rem] tracking-wide text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-[0.95rem] font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-fg text-bg hover:bg-accent hover:text-on-accent;
+  }
+
+  .btn-ghost {
+    @apply btn border border-fg/15 text-fg hover:border-fg/40 hover:bg-fg/[0.04];
+  }
+
+  .link-underline {
+    @apply underline decoration-fg/25 underline-offset-4 transition-colors hover:decoration-accent;
+  }
 }
 
-.borderBlack {
-  @apply border border-black/10;
+/* Hero: pointer-driven light, only on fine pointers and without reduced motion. */
+.hero-grid {
+  background-image: radial-gradient(rgb(var(--c-fg) / 0.13) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
+}
+
+.hero-spotlight {
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 40%),
+    rgb(var(--c-accent) / 0.12),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-zone:hover .hero-spotlight {
+    opacity: 1;
+  }
+}
+
+/* Native dialog */
+dialog.project-dialog {
+  max-width: min(100vw - 1.5rem, 56rem);
+  max-height: min(100dvh - 1.5rem, 54rem);
+}
+
+dialog.project-dialog::backdrop {
+  background: rgb(12 12 11 / 0.55);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  dialog.project-dialog[open] {
+    @apply animate-dialog-in;
+  }
+
+  dialog.project-dialog[open]::backdrop {
+    animation: backdrop-in 0.2s ease-out both;
+  }
+
+  .motion-rise {
+    @apply animate-rise;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Theme switch circular reveal (View Transitions API, progressive enhancement). */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

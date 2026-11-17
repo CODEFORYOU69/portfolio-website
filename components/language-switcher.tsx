@@ -1,37 +1,52 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from "next-intl";
+import clsx from "clsx";
 
-const locales = ['en', 'fr'] as const;
+const locales = [
+  { code: "fr", label: "Français" },
+  { code: "en", label: "English" },
+] as const;
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
   const currentLocale = useLocale();
+  const t = useTranslations("nav");
 
   const changeLanguage = (newLocale: string) => {
-    const segments = pathname.split('/');
+    if (newLocale === currentLocale) return;
+    const segments = pathname.split("/");
     segments[1] = newLocale;
-    router.push(segments.join('/'));
+    router.push(segments.join("/") + window.location.hash, { scroll: false });
   };
 
   return (
-    <div className="fixed bottom-5 left-5 z-[999] flex gap-2">
-      {locales.map((locale) => (
-        <button
-          key={locale}
-          onClick={() => changeLanguage(locale)}
-          className={`px-3 py-2 rounded-full text-sm font-medium transition-all ${
-            currentLocale === locale
-              ? "bg-gray-900 text-white dark:bg-white/20"
-              : "bg-white/80 text-gray-700 hover:bg-white dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-          } borderBlack`}
-          aria-label={`Switch to ${locale === "en" ? "English" : "Français"}`}
-        >
-          {locale.toUpperCase()}
-        </button>
-      ))}
+    <div
+      role="group"
+      aria-label={t("language")}
+      className="flex items-center rounded-full border hairline p-0.5 font-mono text-[0.7rem]"
+    >
+      {locales.map(({ code, label }) => {
+        const active = currentLocale === code;
+        return (
+          <button
+            key={code}
+            type="button"
+            lang={code}
+            onClick={() => changeLanguage(code)}
+            aria-pressed={active}
+            aria-label={t("switchTo", { language: label })}
+            className={clsx(
+              "rounded-full px-2 py-1 uppercase tracking-wider transition-colors",
+              active ? "bg-fg text-bg" : "text-muted hover:text-fg"
+            )}
+          >
+            {code}
+          </button>
+        );
+      })}
     </div>
   );
 }

@@ -1,55 +1,46 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
+import clsx from "clsx";
+import { useTranslations } from "next-intl";
+import { skillGroups } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-import { useTranslations } from 'next-intl';
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
+import SectionHeading from "./section-heading";
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
-  const t = useTranslations('skills');
+  const t = useTranslations("skills");
 
   return (
-    <section
-      id="skills"
-      ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
-    >
-      <SectionHeading>{t('title')}</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center gap-2"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            <span className="text-2xl" style={{ color: skill.color }}>{skill.icon}</span>
-            <span>{skill.name}</span>
-          </motion.li>
-        ))}
-      </ul>
+    <section ref={ref} id="skills" aria-labelledby="skills-title" className="py-20 sm:py-28">
+      <div className="container-page">
+        <SectionHeading id="skills-title" index={t("index")} title={t("title")} />
+
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {skillGroups.map((group) => {
+            // AI groups are descriptive (translated) and highlighted; the others are tool names.
+            const highlighted = group.translated;
+            const items = group.translated ? (t.raw(`${group.key}Items`) as string[]) : group.items;
+            return (
+              <div
+                key={group.key}
+                className={clsx(
+                  "rounded-2xl border p-6",
+                  highlighted ? "border-accent/40 bg-accent/[0.06] lg:col-span-2" : "hairline bg-surface"
+                )}
+              >
+                <h3 className={clsx("eyebrow", highlighted && "text-accent")}>{t(`groups.${group.key}`)}</h3>
+                <ul className={clsx("mt-4", highlighted ? "divide-y divide-fg/10" : "flex flex-wrap gap-1.5")}>
+                  {items.map((item) => (
+                    <li key={item} className={clsx(highlighted ? "py-2.5 text-[1.05rem] leading-snug" : "chip text-[0.78rem] text-fg/80")}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 }
