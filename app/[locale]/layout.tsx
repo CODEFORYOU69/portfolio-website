@@ -1,4 +1,5 @@
 import "../globals.css";
+import type { Metadata } from "next";
 import { Instrument_Serif, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -8,6 +9,7 @@ import Footer from "@/components/footer";
 import MotionProvider from "@/components/motion-provider";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider, { themeInitScript } from "@/context/theme-context";
+import { siteUrl } from "@/lib/data";
 
 const sans = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const serif = Instrument_Serif({
@@ -23,14 +25,34 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fr" }];
 }
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta" });
+  const image = { url: `/og-${locale}.png`, width: 1200, height: 630, alt: t("title") };
 
   return {
+    metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
-    alternates: { languages: { fr: "/fr", en: "/en" } },
-    openGraph: { title: t("title"), description: t("description"), type: "website", locale },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { fr: "/fr", en: "/en", "x-default": "/fr" },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}`,
+      siteName: "Younes Ouasmi",
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      alternateLocale: locale === "fr" ? "en_US" : "fr_FR",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [image.url],
+    },
   };
 }
 

@@ -12,6 +12,9 @@ import bronImg from "@/public/btkd.png";
 import epsilonImg from "@/public/epsilon.png";
 import instagridImg from "@/public/oc.png";
 
+/** Canonical host: the apex younesouasmi.com redirects to www on Vercel. */
+export const siteUrl = "https://www.younesouasmi.com";
+
 export const contact = {
   email: "y.ouasmi@gmail.com",
   linkedin: "https://www.linkedin.com/in/younes-ouasmi-468926142/",
